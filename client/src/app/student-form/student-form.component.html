@@ -1,0 +1,38 @@
+
+<br>
+<br>
+<h2 style="text-align: center">Register Student</h2>
+<br>
+<br>
+
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="rollnumber"><strong>Roll Number</strong>  </label>
+            <input type="number" class="form-control" id=roll required [(ngModel)]="model.rollNumber" #name="ngModel" name="rollNumber" placeholder="Enter Roll Number">
+          </div>
+
+        <div class="form-group">
+          <label for="phone"> <strong>Name</strong>  </label>
+          <input type="text" class="form-control" [(ngModel)]="model.name" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="standard"><strong>Standard</strong>  </label>
+            <input type="text" class="form-control" id=address [(ngModel)]="model.standard" name="standard" placeholder="Enter Standard">
+          </div>
+        <div class="form-group">
+          <label for="age"><strong>Age</strong>  </label>
+          <input type="number" class="form-control" id=age required [(ngModel)]="model.age" #name="ngModel" name="age" placeholder="Enter Age">
+        </div>
+
+
+
+        <button type="button" (click)="onSubmit()" class="btn btn-success">Submit</button>
+      </form>
+
+        <br>
+      <div *ngIf="errorMessage" class="alert alert-danger">
+          <strong>{{errorMessage}}</strong>
+      </div>
+
+</div>

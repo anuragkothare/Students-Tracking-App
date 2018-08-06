@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif">Student Tracking App</h3>
+</div>
+<body>
+<div class="login-form">
+    <form action="/examples/actions/confirmation.php" method="post">
+        <h2 class="text-center">Log in</h2>
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="email" required="required" [(ngModel)]="model.email" name="email" #name="ngModel">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" required="required" [(ngModel)]="model.password" name="password" #password="ngModel">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-block" (click)="onSubmit()">Log in</button>
+        </div>
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+        </div>
+    </form>
+    <button type="button" href="" (click)="createAccount()" class="text-center"><a >Create an Account</a></button>
+
+</div>
+</body>

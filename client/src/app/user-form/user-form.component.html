@@ -1,0 +1,31 @@
+
+<br>
+<br>
+<h2 style="text-align: center">Admin Registration</h2>
+<br>
+<br>
+
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="emailr"><strong>Email</strong>  </label>
+            <input type="email" class="form-control" id=email required [(ngModel)]="model.email" #name="ngModel" name="email" placeholder="Enter Email">
+          </div>
+
+        <div class="form-group">
+          <label for="name"> <strong>Name</strong>  </label>
+          <input type="text" class="form-control" [(ngModel)]="model.name" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="password"><strong>Password</strong>  </label>
+            <input type="password" class="form-control" id=address [(ngModel)]="model.password" name="password" placeholder="Enter password">
+          </div>
+        <button type="button" (click)="onSubmit()" class="btn btn-success">Submit</button>
+      </form>
+
+        <br>
+      <div *ngIf="errorMessage" class="alert alert-danger">
+          <strong>{{errorMessage}}</strong>
+      </div>
+
+</div>
