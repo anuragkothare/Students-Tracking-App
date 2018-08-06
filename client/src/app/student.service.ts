@@ -14,7 +14,7 @@ export class StudentService {
 
   constructor(public http: HttpClient) { }
 
-  public baseUrl = "http://localhost:5000/api/"
+  public baseUrl = "api/"
 
   // Login User
   loginUser(email: String, password: String) {

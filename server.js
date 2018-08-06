@@ -30,12 +30,19 @@ app.use(passport.initialize())
 //  Passport Config
 require('./config/passport.js')(passport)
 
+// Create link to Angular build directory
+var distDir = __dirname + "/client/dist/";
+app.use(express.static(distDir));
+
 
 
 // Use Routes
 app.use('/api/users', users)
 app.use('/api/students', students)
 
+app.get('*', function(req, res) {
+  res.sendfile('./client/dist/index.html')
+})
 
 const port = process.env.PORT || 5000
 
